@@ -3,12 +3,11 @@ let performanceData = [];
 let sensorData = [];
 let surveyData = [];
 let map = null;
-let predictionChart = null;
-let timeRange = { min: 0, max: 20, current: 20 };
+let snapshots = [];
 
 document.addEventListener('DOMContentLoaded', function() {
     loadAllData();
-    initializeTimeTravel();
+    loadSnapshots();
 });
 
 async function loadAllData() {
@@ -36,136 +35,201 @@ async function loadAllData() {
     }
 }
 
-async function initializeTimeTravel() {
+// Iceberg Time Travel Functions
+async function loadSnapshots() {
     try {
-        const range = await fetch('/api/time_range').then(r => r.json());
-        timeRange = range;
+        const response = await fetch('/api/iceberg/snapshots');
+        snapshots = await response.json();
         
-        const slider = document.getElementById('timeSlider');
-        slider.min = range.min_time;
-        slider.max = range.max_time;
-        slider.value = range.current_time;
+        // Update snapshot list
+        const listHtml = snapshots.map(s => `
+            <div class="snapshot-item">
+                <strong>Snapshot ${s.snapshot_id}</strong><br>
+                📅 ${new Date(s.timestamp).toLocaleString()}<br>
+                📊 ${s.records_count} records
+            </div>
+        `).join('');
         
-        slider.oninput = function() {
-            document.getElementById('timeDisplay').textContent = `Time: ${this.value}`;
-        };
+        document.getElementById('snapshotList').innerHTML = listHtml || '<p>No snapshots available</p>';
         
-        console.log('✓ Time travel initialized');
+        // Populate dropdowns
+        const options = snapshots.map(s => 
+            `<option value="${s.snapshot_id}">Snapshot ${s.snapshot_id} (${new Date(s.timestamp).toLocaleString()})</option>`
+        ).join('');
+        
+        document.getElementById('snapshotSelect').innerHTML = '<option value="">-- Select Snapshot --</option>' + options;
+        document.getElementById('compareSnap1').innerHTML = '<option value="">-- Select --</option>' + options;
+        document.getElementById('compareSnap2').innerHTML = '<option value="">-- Select --</option>' + options;
+        
+        console.log('✓ Loaded', snapshots.length, 'snapshots');
     } catch (error) {
-        console.error('Time travel init error:', error);
+        console.error('Error loading snapshots:', error);
+        document.getElementById('snapshotList').innerHTML = '<p style="color: red;">Error loading snapshots</p>';
     }
 }
 
-async function loadTimeTravel() {
-    const timePoint = document.getElementById('timeSlider').value;
+async function querySnapshot() {
+    const snapshotId = document.getElementById('snapshotSelect').value;
+    
+    if (!snapshotId) {
+        alert('Please select a snapshot');
+        return;
+    }
     
     try {
-        const snapshot = await fetch(`/api/time_travel/${timePoint}`).then(r => r.json());
+        const response = await fetch(`/api/iceberg/snapshot/${snapshotId}`);
+        const data = await response.json();
         
-        document.getElementById('snapshotStats').innerHTML = `
+        document.getElementById('snapshotResult').innerHTML = `
             <div class="stat-box">
-                <strong>Time Point:</strong> ${snapshot.time_point}
+                <strong>Snapshot ID:</strong> ${data.snapshot_id}
             </div>
             <div class="stat-box">
-                <strong>Wells Active:</strong> ${snapshot.wells_at_time}
+                <strong>Timestamp:</strong> ${new Date(data.timestamp).toLocaleString()}
             </div>
             <div class="stat-box">
-                <strong>Total Readings:</strong> ${snapshot.total_readings.toLocaleString()}
+                <strong>Total Wells:</strong> ${data.total_wells}
             </div>
             <div class="stat-box">
-                <strong>Avg Amplitude:</strong> ${snapshot.avg_amplitude.toFixed(4)}
+                <strong>Total Readings:</strong> ${data.total_readings.toLocaleString()}
             </div>
             <div class="stat-box">
-                <strong>Data Quality:</strong> ${(snapshot.avg_quality * 100).toFixed(1)}%
+                <strong>Avg Amplitude:</strong> ${data.avg_amplitude.toFixed(4)}
             </div>
-            <h4>Wells at this time:</h4>
-            <ul>
-                ${snapshot.wells.slice(0, 10).map(w => `
-                    <li>Well ${w.well_id} (${w.well_name}): ${w.avg_amplitude.toFixed(2)} amplitude, ${w.total_readings} readings</li>
-                `).join('')}
-            </ul>
+            <div class="stat-box">
+                <strong>Avg Quality:</strong> ${(data.avg_quality * 100).toFixed(1)}%
+            </div>
         `;
         
-        console.log('✓ Time travel snapshot loaded');
+        // Display data in table
+        renderSnapshotTable(data.wells);
+        
+        console.log('✓ Snapshot queried');
     } catch (error) {
-        console.error('Time travel error:', error);
-        document.getElementById('snapshotStats').innerHTML = `<p style="color: red;">Error: ${error}</p>`;
+        console.error('Error:', error);
+        document.getElementById('snapshotResult').innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
     }
 }
 
-async function runPrediction() {
-    const model = document.getElementById('modelSelect').value;
-    const periods = document.getElementById('periodsInput').value;
+async function timeTravelQuery() {
+    const timestamp = document.getElementById('timestampInput').value;
     
-    document.getElementById('predictionStats').innerHTML = '<p>Predicting... Please wait...</p>';
+    if (!timestamp) {
+        alert('Please select a timestamp');
+        return;
+    }
     
     try {
-        const result = await fetch(`/api/predict?model=${model}&periods=${periods}`).then(r => r.json());
+        const response = await fetch(`/api/iceberg/time_travel?timestamp=${timestamp}`);
+        const data = await response.json();
         
-        document.getElementById('predictionStats').innerHTML = `
+        document.getElementById('snapshotResult').innerHTML = `
             <div class="stat-box">
-                <strong>Model:</strong> ${result.model === 'linear' ? 'Linear Regression' : 'Random Forest'}
+                <strong>Time Travel To:</strong> ${new Date(timestamp).toLocaleString()}
             </div>
             <div class="stat-box">
-                <strong>Periods:</strong> ${result.periods} future time points
+                <strong>Snapshot Found:</strong> ${data.snapshot_id}
             </div>
-            <h4>Predictions:</h4>
-            <ul>
-                ${result.predictions.map(p => `
-                    <li>Time ${p.time_index}: Amplitude = ${p.predicted_amplitude.toFixed(4)}</li>
-                `).join('')}
-            </ul>
+            <div class="stat-box">
+                <strong>Actual Timestamp:</strong> ${new Date(data.timestamp).toLocaleString()}
+            </div>
+            <div class="stat-box">
+                <strong>Total Wells:</strong> ${data.total_wells}
+            </div>
+            <div class="stat-box">
+                <strong>Avg Amplitude:</strong> ${data.avg_amplitude.toFixed(4)}
+            </div>
         `;
         
-        // Create prediction chart
-        renderPredictionChart(result.predictions);
+        renderSnapshotTable(data.wells);
         
-        console.log('✓ Prediction complete');
+        console.log('✓ Time travel query complete');
     } catch (error) {
-        console.error('Prediction error:', error);
-        document.getElementById('predictionStats').innerHTML = `<p style="color: red;">Error: ${error}</p>`;
+        console.error('Error:', error);
+        document.getElementById('snapshotResult').innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
     }
 }
 
-function renderPredictionChart(predictions) {
-    const ctx = document.getElementById('predictionChart');
+async function compareSnapshots() {
+    const snap1 = document.getElementById('compareSnap1').value;
+    const snap2 = document.getElementById('compareSnap2').value;
     
-    if (predictionChart) {
-        predictionChart.destroy();
+    if (!snap1 || !snap2) {
+        alert('Please select two snapshots to compare');
+        return;
     }
     
-    predictionChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: predictions.map(p => `T${p.time_index}`),
-            datasets: [{
-                label: 'Predicted Amplitude',
-                data: predictions.map(p => p.predicted_amplitude),
-                borderColor: 'rgba(102, 126, 234, 1)',
-                backgroundColor: 'rgba(102, 126, 234, 0.2)',
-                fill: true,
-                tension: 0.4
-            }]
-        },
-        options: {
-            responsive: true,
-            plugins: {
-                title: {
-                    display: true,
-                    text: 'Future Amplitude Predictions'
-                }
-            },
-            scales: {
-                y: {
-                    beginAtZero: false,
-                    title: { display: true, text: 'Amplitude' }
-                },
-                x: {
-                    title: { display: true, text: 'Time Point' }
-                }
-            }
-        }
-    });
+    try {
+        const response = await fetch(`/api/iceberg/compare?snapshot1=${snap1}&snapshot2=${snap2}`);
+        const data = await response.json();
+        
+        const changeIcon = data.changes.amplitude_diff > 0 ? '📈' : '📉';
+        const changeColor = data.changes.amplitude_diff > 0 ? 'green' : 'red';
+        
+        document.getElementById('comparisonResult').innerHTML = `
+            <h4>Snapshot ${snap1} vs ${snap2}</h4>
+            
+            <div class="comparison-grid">
+                <div class="comparison-col">
+                    <h5>Snapshot ${snap1}</h5>
+                    <div class="stat-box">
+                        <strong>Time:</strong> ${new Date(data.snapshot_1.timestamp).toLocaleString()}
+                    </div>
+                    <div class="stat-box">
+                        <strong>Wells:</strong> ${data.snapshot_1.total_wells}
+                    </div>
+                    <div class="stat-box">
+                        <strong>Amplitude:</strong> ${data.snapshot_1.avg_amplitude.toFixed(4)}
+                    </div>
+                </div>
+                
+                <div class="comparison-col">
+                    <h5>Snapshot ${snap2}</h5>
+                    <div class="stat-box">
+                        <strong>Time:</strong> ${new Date(data.snapshot_2.timestamp).toLocaleString()}
+                    </div>
+                    <div class="stat-box">
+                        <strong>Wells:</strong> ${data.snapshot_2.total_wells}
+                    </div>
+                    <div class="stat-box">
+                        <strong>Amplitude:</strong> ${data.snapshot_2.avg_amplitude.toFixed(4)}
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stat-box" style="background: #f0f7ff; margin-top: 1rem;">
+                <h5>${changeIcon} Changes</h5>
+                <p><strong>Wells Difference:</strong> ${data.changes.wells_diff}</p>
+                <p><strong>Amplitude Difference:</strong> <span style="color: ${changeColor}">${data.changes.amplitude_diff.toFixed(4)}</span></p>
+                <p><strong>Change:</strong> <span style="color: ${changeColor}">${data.changes.amplitude_change_pct.toFixed(2)}%</span></p>
+            </div>
+        `;
+        
+        console.log('✓ Snapshot comparison complete');
+    } catch (error) {
+        console.error('Error:', error);
+        document.getElementById('comparisonResult').innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+    }
+}
+
+function renderSnapshotTable(wells) {
+    const tbody = document.getElementById('snapshotDataBody');
+    
+    if (!wells || wells.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="6">No data</td></tr>';
+        return;
+    }
+    
+    tbody.innerHTML = wells.slice(0, 20).map(w => `
+        <tr>
+            <td>${w.well_id}</td>
+            <td>${w.well_name || 'N/A'}</td>
+            <td>${w.total_readings.toLocaleString()}</td>
+            <td>${w.avg_amplitude.toFixed(2)}</td>
+            <td>${(w.data_quality_rate * 100).toFixed(1)}%</td>
+            <td>${w.anomaly_count}</td>
+        </tr>
+    `).join('');
 }
 
 function updateStats(stats) {

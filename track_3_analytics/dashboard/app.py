@@ -2,12 +2,19 @@ from flask import Flask, render_template, jsonify, request
 import pandas as pd
 import os
 import numpy as np
-from ml_predictor import SeismicPredictor
+from iceberg_manager import IcebergTimeTravel
 
 app = Flask(__name__)
 
 DATA_MARTS_DIR = 'data_marts'
-predictor = SeismicPredictor(DATA_MARTS_DIR)
+iceberg = IcebergTimeTravel()
+
+# Initialize Iceberg tables on startup
+try:
+    iceberg.initialize_seismic_table()
+    print("✓ Iceberg tables initialized")
+except Exception as e:
+    print(f"⚠ Iceberg initialization: {e}")
 
 def load_mart(filename):
     """Load data mart CSV and handle NaN values"""
@@ -107,41 +114,53 @@ def api_wells_map():
     
     return jsonify(wells)
 
-# NEW: Time Travel & Prediction Endpoints
-@app.route('/api/time_travel/<int:time_point>')
-def api_time_travel(time_point):
-    """Time travel: Get historical snapshot"""
+# Iceberg Time Travel Endpoints
+@app.route('/api/iceberg/snapshots')
+def api_iceberg_snapshots():
+    """List all Iceberg snapshots"""
     try:
-        snapshot = predictor.get_historical_snapshot(time_point)
-        return jsonify(snapshot)
+        snapshots = iceberg.list_snapshots()
+        return jsonify(snapshots)
     except Exception as e:
-        return jsonify({'error': str(e)}), 400
+        return jsonify({'error': str(e)}), 500
 
-@app.route('/api/predict')
-def api_predict():
-    """ML Prediction endpoint"""
-    model_type = request.args.get('model', 'linear')  # linear or random_forest
-    periods = int(request.args.get('periods', 5))
+@app.route('/api/iceberg/snapshot/<snapshot_id>')
+def api_iceberg_snapshot(snapshot_id):
+    """Query specific snapshot"""
+    try:
+        data = iceberg.query_snapshot(snapshot_id)
+        return jsonify(data)
+    except Exception as e:
+        return jsonify({'error': str(e)}), 404
+
+@app.route('/api/iceberg/compare')
+def api_iceberg_compare():
+    """Compare two snapshots"""
+    snap1 = request.args.get('snapshot1')
+    snap2 = request.args.get('snapshot2')
+    
+    if not snap1 or not snap2:
+        return jsonify({'error': 'Both snapshot1 and snapshot2 parameters required'}), 400
     
     try:
-        predictions = predictor.predict_future(model_type, periods)
-        return jsonify({
-            'model': model_type,
-            'periods': periods,
-            'predictions': predictions
-        })
+        comparison = iceberg.compare_snapshots(snap1, snap2)
+        return jsonify(comparison)
     except Exception as e:
         return jsonify({'error': str(e)}), 400
 
-@app.route('/api/time_range')
-def api_time_range():
-    """Get available time range for time travel"""
-    df = predictor.prepare_time_series_data()
-    return jsonify({
-        'min_time': int(df['time_index'].min()),
-        'max_time': int(df['time_index'].max()),
-        'current_time': int(df['time_index'].max())
-    })
+@app.route('/api/iceberg/time_travel')
+def api_iceberg_time_travel():
+    """Query data at specific timestamp"""
+    timestamp = request.args.get('timestamp')
+    
+    if not timestamp:
+        return jsonify({'error': 'timestamp parameter required'}), 400
+    
+    try:
+        data = iceberg.time_travel_query(timestamp)
+        return jsonify(data)
+    except Exception as e:
+        return jsonify({'error': str(e)}), 404
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80, debug=False)

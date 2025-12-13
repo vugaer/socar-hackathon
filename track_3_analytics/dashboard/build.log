@@ -1,0 +1,21 @@
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  61.95kB
+Step 1/11 : FROM python:3.11-slim
+ ---> cb352e69d7b6
+Step 2/11 : WORKDIR /app
+ ---> Using cache
+ ---> e63b168dc336
+Step 3/11 : COPY requirements.txt .
+ ---> Using cache
+ ---> 13d461fad16a
+Step 4/11 : RUN pip install --no-cache-dir -r requirements.txt
+ ---> Using cache
+ ---> bd2c4c8c5c9b
+Step 5/11 : COPY app.py .
+ ---> Using cache
+ ---> a231cd5be188
+Step 6/11 : COPY ml_predictor.py .
+COPY failed: file not found in build context or excluded by .dockerignore: stat ml_predictor.py: file does not exist
