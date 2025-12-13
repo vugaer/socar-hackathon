@@ -1,0 +1,95 @@
+[2025-12-13T19:20:35.873+0000] {processor.py:161} INFO - Started process (PID=196) to work on /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:20:35.874+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/realtime_monitoring_dag.py for tasks to queue
+[2025-12-13T19:20:35.874+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:20:35.874+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:20:36.419+0000] {processor.py:840} INFO - DAG(s) 'realtime_monitoring' retrieved from /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:20:36.494+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:20:36.494+0000] {override.py:1769} INFO - Created Permission View: can edit on DAG:realtime_monitoring
+[2025-12-13T19:20:36.500+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:20:36.500+0000] {override.py:1769} INFO - Created Permission View: can delete on DAG:realtime_monitoring
+[2025-12-13T19:20:36.505+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:20:36.504+0000] {override.py:1769} INFO - Created Permission View: can read on DAG:realtime_monitoring
+[2025-12-13T19:20:36.505+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:20:36.505+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:20:36.511+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:20:36.511+0000] {dag.py:3055} INFO - Creating ORM DAG for realtime_monitoring
+[2025-12-13T19:20:36.517+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:20:36.517+0000] {dag.py:3820} INFO - Setting next_dagrun for realtime_monitoring to 2025-12-13T18:30:00+00:00, run_after=2025-12-13T19:00:00+00:00
+[2025-12-13T19:20:36.527+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/realtime_monitoring_dag.py took 0.656 seconds
+[2025-12-13T19:21:06.998+0000] {processor.py:161} INFO - Started process (PID=218) to work on /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:21:06.998+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/realtime_monitoring_dag.py for tasks to queue
+[2025-12-13T19:21:06.999+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:21:06.999+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:21:07.173+0000] {processor.py:840} INFO - DAG(s) 'realtime_monitoring' retrieved from /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:21:07.192+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:21:07.191+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:21:07.205+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:21:07.205+0000] {dag.py:3820} INFO - Setting next_dagrun for realtime_monitoring to 2025-12-13T18:30:00+00:00, run_after=2025-12-13T19:00:00+00:00
+[2025-12-13T19:21:07.216+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/realtime_monitoring_dag.py took 0.220 seconds
+[2025-12-13T19:21:37.358+0000] {processor.py:161} INFO - Started process (PID=241) to work on /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:21:37.359+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/realtime_monitoring_dag.py for tasks to queue
+[2025-12-13T19:21:37.359+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:21:37.359+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:21:37.533+0000] {processor.py:840} INFO - DAG(s) 'realtime_monitoring' retrieved from /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:21:37.551+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:21:37.551+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:21:37.565+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:21:37.565+0000] {dag.py:3820} INFO - Setting next_dagrun for realtime_monitoring to 2025-12-13T18:30:00+00:00, run_after=2025-12-13T19:00:00+00:00
+[2025-12-13T19:21:37.576+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/realtime_monitoring_dag.py took 0.220 seconds
+[2025-12-13T19:22:07.718+0000] {processor.py:161} INFO - Started process (PID=264) to work on /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:22:07.719+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/realtime_monitoring_dag.py for tasks to queue
+[2025-12-13T19:22:07.719+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:22:07.719+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:22:07.892+0000] {processor.py:840} INFO - DAG(s) 'realtime_monitoring' retrieved from /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:22:07.912+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:22:07.912+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:22:07.926+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:22:07.926+0000] {dag.py:3820} INFO - Setting next_dagrun for realtime_monitoring to 2025-12-13T18:30:00+00:00, run_after=2025-12-13T19:00:00+00:00
+[2025-12-13T19:22:07.937+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/realtime_monitoring_dag.py took 0.221 seconds
+[2025-12-13T19:22:38.080+0000] {processor.py:161} INFO - Started process (PID=287) to work on /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:22:38.089+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/realtime_monitoring_dag.py for tasks to queue
+[2025-12-13T19:22:38.089+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:22:38.089+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:22:38.264+0000] {processor.py:840} INFO - DAG(s) 'realtime_monitoring' retrieved from /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:22:38.281+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:22:38.281+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:22:38.294+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:22:38.294+0000] {dag.py:3820} INFO - Setting next_dagrun for realtime_monitoring to 2025-12-13T18:30:00+00:00, run_after=2025-12-13T19:00:00+00:00
+[2025-12-13T19:22:38.305+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/realtime_monitoring_dag.py took 0.227 seconds
+[2025-12-13T19:23:08.440+0000] {processor.py:161} INFO - Started process (PID=310) to work on /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:23:08.441+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/realtime_monitoring_dag.py for tasks to queue
+[2025-12-13T19:23:08.441+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:23:08.441+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:23:08.616+0000] {processor.py:840} INFO - DAG(s) 'realtime_monitoring' retrieved from /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:23:08.634+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:23:08.634+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:23:08.648+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:23:08.648+0000] {dag.py:3820} INFO - Setting next_dagrun for realtime_monitoring to 2025-12-13T18:30:00+00:00, run_after=2025-12-13T19:00:00+00:00
+[2025-12-13T19:23:08.659+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/realtime_monitoring_dag.py took 0.221 seconds
+[2025-12-13T19:23:38.801+0000] {processor.py:161} INFO - Started process (PID=333) to work on /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:23:38.801+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/realtime_monitoring_dag.py for tasks to queue
+[2025-12-13T19:23:38.801+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:23:38.801+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:23:38.976+0000] {processor.py:840} INFO - DAG(s) 'realtime_monitoring' retrieved from /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:23:38.995+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:23:38.994+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:23:39.008+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:23:39.008+0000] {dag.py:3820} INFO - Setting next_dagrun for realtime_monitoring to 2025-12-13T18:30:00+00:00, run_after=2025-12-13T19:00:00+00:00
+[2025-12-13T19:23:39.019+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/realtime_monitoring_dag.py took 0.220 seconds
+[2025-12-13T19:24:09.163+0000] {processor.py:161} INFO - Started process (PID=356) to work on /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:24:09.164+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/realtime_monitoring_dag.py for tasks to queue
+[2025-12-13T19:24:09.165+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:24:09.164+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:24:09.342+0000] {processor.py:840} INFO - DAG(s) 'realtime_monitoring' retrieved from /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:24:09.361+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:24:09.360+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:24:09.375+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:24:09.375+0000] {dag.py:3820} INFO - Setting next_dagrun for realtime_monitoring to 2025-12-13T18:30:00+00:00, run_after=2025-12-13T19:00:00+00:00
+[2025-12-13T19:24:09.386+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/realtime_monitoring_dag.py took 0.224 seconds
+[2025-12-13T19:24:39.530+0000] {processor.py:161} INFO - Started process (PID=379) to work on /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:24:39.530+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/realtime_monitoring_dag.py for tasks to queue
+[2025-12-13T19:24:39.530+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:24:39.530+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:24:39.705+0000] {processor.py:840} INFO - DAG(s) 'realtime_monitoring' retrieved from /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:24:39.724+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:24:39.724+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:24:39.737+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:24:39.737+0000] {dag.py:3820} INFO - Setting next_dagrun for realtime_monitoring to 2025-12-13T18:30:00+00:00, run_after=2025-12-13T19:00:00+00:00
+[2025-12-13T19:24:39.749+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/realtime_monitoring_dag.py took 0.221 seconds
+[2025-12-13T19:25:09.891+0000] {processor.py:161} INFO - Started process (PID=402) to work on /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:25:09.891+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/realtime_monitoring_dag.py for tasks to queue
+[2025-12-13T19:25:09.892+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:25:09.892+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:25:10.066+0000] {processor.py:840} INFO - DAG(s) 'realtime_monitoring' retrieved from /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:25:10.085+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:25:10.084+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:25:10.099+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:25:10.099+0000] {dag.py:3820} INFO - Setting next_dagrun for realtime_monitoring to 2025-12-13T18:30:00+00:00, run_after=2025-12-13T19:00:00+00:00
+[2025-12-13T19:25:10.111+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/realtime_monitoring_dag.py took 0.222 seconds
+[2025-12-13T19:25:40.261+0000] {processor.py:161} INFO - Started process (PID=425) to work on /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:25:40.261+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/realtime_monitoring_dag.py for tasks to queue
+[2025-12-13T19:25:40.261+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:25:40.261+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:25:40.436+0000] {processor.py:840} INFO - DAG(s) 'realtime_monitoring' retrieved from /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:25:40.455+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:25:40.455+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:25:40.468+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:25:40.468+0000] {dag.py:3820} INFO - Setting next_dagrun for realtime_monitoring to 2025-12-13T18:30:00+00:00, run_after=2025-12-13T19:00:00+00:00
+[2025-12-13T19:25:40.480+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/realtime_monitoring_dag.py took 0.222 seconds
+[2025-12-13T19:26:10.622+0000] {processor.py:161} INFO - Started process (PID=448) to work on /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:26:10.623+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/realtime_monitoring_dag.py for tasks to queue
+[2025-12-13T19:26:10.623+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:26:10.623+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:26:10.800+0000] {processor.py:840} INFO - DAG(s) 'realtime_monitoring' retrieved from /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:26:10.818+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:26:10.818+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:26:10.832+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:26:10.832+0000] {dag.py:3820} INFO - Setting next_dagrun for realtime_monitoring to 2025-12-13T18:30:00+00:00, run_after=2025-12-13T19:00:00+00:00
+[2025-12-13T19:26:10.843+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/realtime_monitoring_dag.py took 0.223 seconds
+[2025-12-13T19:26:40.987+0000] {processor.py:161} INFO - Started process (PID=471) to work on /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:26:40.987+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/realtime_monitoring_dag.py for tasks to queue
+[2025-12-13T19:26:40.988+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:26:40.988+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:26:41.163+0000] {processor.py:840} INFO - DAG(s) 'realtime_monitoring' retrieved from /opt/airflow/dags/realtime_monitoring_dag.py
+[2025-12-13T19:26:41.181+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:26:41.180+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:26:41.195+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:26:41.195+0000] {dag.py:3820} INFO - Setting next_dagrun for realtime_monitoring to 2025-12-13T18:30:00+00:00, run_after=2025-12-13T19:00:00+00:00
+[2025-12-13T19:26:41.206+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/realtime_monitoring_dag.py took 0.221 seconds

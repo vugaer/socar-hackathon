@@ -1,0 +1,150 @@
+[2025-12-13T19:20:35.531+0000] {manager.py:469} INFO - Processing files using up to 2 processes at a time 
+[2025-12-13T19:20:35.531+0000] {manager.py:470} INFO - Process each file at most once every 30 seconds
+[2025-12-13T19:20:35.531+0000] {manager.py:471} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-12-13T19:20:35.531+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-12-13T19:20:35.532+0000] {manager.py:741} INFO - There are 4 files in /opt/airflow/dags
+[2025-12-13T19:20:35.603+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/data_validation_dag.py        186  0.04s             0           0
+/opt/airflow/dags/ml_training_pipeline.py       189  0.03s             0           0
+/opt/airflow/dags/seismic_etl_pipeline.py                              0           0
+/opt/airflow/dags/realtime_monitoring_dag.py                           0           0
+================================================================================
+[2025-12-13T19:21:05.974+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_validation_dag.py        210  0.00s             1           0  0.30s           2025-12-13T19:20:35
+/opt/airflow/dags/ml_training_pipeline.py                              1           0  0.97s           2025-12-13T19:20:36
+/opt/airflow/dags/seismic_etl_pipeline.py                              1           0  0.34s           2025-12-13T19:20:36
+/opt/airflow/dags/realtime_monitoring_dag.py                           1           0  0.67s           2025-12-13T19:20:36
+================================================================================
+[2025-12-13T19:21:36.338+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_validation_dag.py        233  0.00s             1           0  0.07s           2025-12-13T19:21:06
+/opt/airflow/dags/ml_training_pipeline.py                              1           0  0.25s           2025-12-13T19:21:07
+/opt/airflow/dags/seismic_etl_pipeline.py                              1           0  0.25s           2025-12-13T19:21:07
+/opt/airflow/dags/realtime_monitoring_dag.py                           1           0  0.24s           2025-12-13T19:21:07
+================================================================================
+[2025-12-13T19:22:06.698+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_validation_dag.py        256  0.00s             1           0  0.07s           2025-12-13T19:21:36
+/opt/airflow/dags/ml_training_pipeline.py                              1           0  0.25s           2025-12-13T19:21:37
+/opt/airflow/dags/seismic_etl_pipeline.py                              1           0  0.24s           2025-12-13T19:21:37
+/opt/airflow/dags/realtime_monitoring_dag.py                           1           0  0.24s           2025-12-13T19:21:37
+================================================================================
+[2025-12-13T19:22:37.059+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_validation_dag.py        279  0.00s             1           0  0.07s           2025-12-13T19:22:06
+/opt/airflow/dags/ml_training_pipeline.py                              1           0  0.25s           2025-12-13T19:22:07
+/opt/airflow/dags/seismic_etl_pipeline.py                              1           0  0.24s           2025-12-13T19:22:08
+/opt/airflow/dags/realtime_monitoring_dag.py                           1           0  0.24s           2025-12-13T19:22:07
+================================================================================
+[2025-12-13T19:23:07.419+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_validation_dag.py        302  0.00s             1           0  0.07s           2025-12-13T19:22:37
+/opt/airflow/dags/ml_training_pipeline.py                              1           0  0.24s           2025-12-13T19:22:38
+/opt/airflow/dags/seismic_etl_pipeline.py                              1           0  0.24s           2025-12-13T19:22:38
+/opt/airflow/dags/realtime_monitoring_dag.py                           1           0  0.24s           2025-12-13T19:22:38
+================================================================================
+[2025-12-13T19:23:37.779+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_validation_dag.py        325  0.00s             1           0  0.07s           2025-12-13T19:23:07
+/opt/airflow/dags/ml_training_pipeline.py                              1           0  0.25s           2025-12-13T19:23:08
+/opt/airflow/dags/seismic_etl_pipeline.py                              1           0  0.24s           2025-12-13T19:23:08
+/opt/airflow/dags/realtime_monitoring_dag.py                           1           0  0.24s           2025-12-13T19:23:08
+================================================================================
+[2025-12-13T19:24:08.142+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_validation_dag.py        348  0.00s             1           0  0.07s           2025-12-13T19:23:37
+/opt/airflow/dags/ml_training_pipeline.py                              1           0  0.25s           2025-12-13T19:23:39
+/opt/airflow/dags/seismic_etl_pipeline.py                              1           0  0.24s           2025-12-13T19:23:39
+/opt/airflow/dags/realtime_monitoring_dag.py                           1           0  0.24s           2025-12-13T19:23:39
+================================================================================
+[2025-12-13T19:24:38.509+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_validation_dag.py        371  0.00s             1           0  0.07s           2025-12-13T19:24:08
+/opt/airflow/dags/ml_training_pipeline.py                              1           0  0.25s           2025-12-13T19:24:09
+/opt/airflow/dags/seismic_etl_pipeline.py                              1           0  0.24s           2025-12-13T19:24:09
+/opt/airflow/dags/realtime_monitoring_dag.py                           1           0  0.25s           2025-12-13T19:24:09
+================================================================================
+[2025-12-13T19:25:08.870+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_validation_dag.py        394  0.00s             1           0  0.07s           2025-12-13T19:24:38
+/opt/airflow/dags/ml_training_pipeline.py                              1           0  0.25s           2025-12-13T19:24:39
+/opt/airflow/dags/seismic_etl_pipeline.py                              1           0  0.24s           2025-12-13T19:24:40
+/opt/airflow/dags/realtime_monitoring_dag.py                           1           0  0.24s           2025-12-13T19:24:39
+================================================================================
+[2025-12-13T19:25:36.216+0000] {manager.py:738} INFO - Searching for files in /opt/airflow/dags
+[2025-12-13T19:25:36.218+0000] {manager.py:741} INFO - There are 4 files in /opt/airflow/dags
+[2025-12-13T19:25:39.239+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_validation_dag.py        417  0.00s             1           0  0.07s           2025-12-13T19:25:08
+/opt/airflow/dags/ml_training_pipeline.py                              1           0  0.25s           2025-12-13T19:25:10
+/opt/airflow/dags/seismic_etl_pipeline.py                              1           0  0.24s           2025-12-13T19:25:10
+/opt/airflow/dags/realtime_monitoring_dag.py                           1           0  0.25s           2025-12-13T19:25:10
+================================================================================
+[2025-12-13T19:26:09.600+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_validation_dag.py        440  0.00s             1           0  0.07s           2025-12-13T19:25:39
+/opt/airflow/dags/ml_training_pipeline.py                              1           0  0.25s           2025-12-13T19:25:40
+/opt/airflow/dags/seismic_etl_pipeline.py                              1           0  0.24s           2025-12-13T19:25:40
+/opt/airflow/dags/realtime_monitoring_dag.py                           1           0  0.24s           2025-12-13T19:25:40
+================================================================================
+[2025-12-13T19:26:39.966+0000] {manager.py:879} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_validation_dag.py        463  0.00s             1           0  0.07s           2025-12-13T19:26:09
+/opt/airflow/dags/ml_training_pipeline.py                              1           0  0.25s           2025-12-13T19:26:10
+/opt/airflow/dags/seismic_etl_pipeline.py                              1           0  0.24s           2025-12-13T19:26:11
+/opt/airflow/dags/realtime_monitoring_dag.py                           1           0  0.24s           2025-12-13T19:26:10
+================================================================================

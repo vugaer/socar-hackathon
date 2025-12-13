@@ -1,0 +1,95 @@
+[2025-12-13T19:20:36.551+0000] {processor.py:161} INFO - Started process (PID=204) to work on /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:20:36.552+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seismic_etl_pipeline.py for tasks to queue
+[2025-12-13T19:20:36.552+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:20:36.552+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:20:36.754+0000] {processor.py:840} INFO - DAG(s) 'seismic_etl_pipeline' retrieved from /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:20:36.824+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:20:36.824+0000] {override.py:1769} INFO - Created Permission View: can edit on DAG:seismic_etl_pipeline
+[2025-12-13T19:20:36.832+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:20:36.831+0000] {override.py:1769} INFO - Created Permission View: can delete on DAG:seismic_etl_pipeline
+[2025-12-13T19:20:36.836+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:20:36.836+0000] {override.py:1769} INFO - Created Permission View: can read on DAG:seismic_etl_pipeline
+[2025-12-13T19:20:36.836+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:20:36.836+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:20:36.843+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:20:36.843+0000] {dag.py:3055} INFO - Creating ORM DAG for seismic_etl_pipeline
+[2025-12-13T19:20:36.850+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:20:36.850+0000] {dag.py:3820} INFO - Setting next_dagrun for seismic_etl_pipeline to 2025-12-13T00:00:00+00:00, run_after=2025-12-14T00:00:00+00:00
+[2025-12-13T19:20:36.861+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seismic_etl_pipeline.py took 0.312 seconds
+[2025-12-13T19:21:07.239+0000] {processor.py:161} INFO - Started process (PID=227) to work on /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:21:07.243+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seismic_etl_pipeline.py for tasks to queue
+[2025-12-13T19:21:07.244+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:21:07.243+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:21:07.423+0000] {processor.py:840} INFO - DAG(s) 'seismic_etl_pipeline' retrieved from /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:21:07.441+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:21:07.441+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:21:07.454+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:21:07.454+0000] {dag.py:3820} INFO - Setting next_dagrun for seismic_etl_pipeline to 2025-12-13T00:00:00+00:00, run_after=2025-12-14T00:00:00+00:00
+[2025-12-13T19:21:07.465+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seismic_etl_pipeline.py took 0.228 seconds
+[2025-12-13T19:21:37.599+0000] {processor.py:161} INFO - Started process (PID=250) to work on /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:21:37.599+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seismic_etl_pipeline.py for tasks to queue
+[2025-12-13T19:21:37.600+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:21:37.599+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:21:37.778+0000] {processor.py:840} INFO - DAG(s) 'seismic_etl_pipeline' retrieved from /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:21:37.796+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:21:37.796+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:21:37.810+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:21:37.810+0000] {dag.py:3820} INFO - Setting next_dagrun for seismic_etl_pipeline to 2025-12-13T00:00:00+00:00, run_after=2025-12-14T00:00:00+00:00
+[2025-12-13T19:21:37.821+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seismic_etl_pipeline.py took 0.224 seconds
+[2025-12-13T19:22:07.959+0000] {processor.py:161} INFO - Started process (PID=273) to work on /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:22:07.960+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seismic_etl_pipeline.py for tasks to queue
+[2025-12-13T19:22:07.960+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:22:07.960+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:22:08.140+0000] {processor.py:840} INFO - DAG(s) 'seismic_etl_pipeline' retrieved from /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:22:08.159+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:22:08.159+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:22:08.172+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:22:08.172+0000] {dag.py:3820} INFO - Setting next_dagrun for seismic_etl_pipeline to 2025-12-13T00:00:00+00:00, run_after=2025-12-14T00:00:00+00:00
+[2025-12-13T19:22:08.183+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seismic_etl_pipeline.py took 0.226 seconds
+[2025-12-13T19:22:38.320+0000] {processor.py:161} INFO - Started process (PID=296) to work on /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:22:38.321+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seismic_etl_pipeline.py for tasks to queue
+[2025-12-13T19:22:38.321+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:22:38.321+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:22:38.500+0000] {processor.py:840} INFO - DAG(s) 'seismic_etl_pipeline' retrieved from /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:22:38.519+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:22:38.518+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:22:38.532+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:22:38.532+0000] {dag.py:3820} INFO - Setting next_dagrun for seismic_etl_pipeline to 2025-12-13T00:00:00+00:00, run_after=2025-12-14T00:00:00+00:00
+[2025-12-13T19:22:38.544+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seismic_etl_pipeline.py took 0.225 seconds
+[2025-12-13T19:23:08.681+0000] {processor.py:161} INFO - Started process (PID=319) to work on /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:23:08.681+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seismic_etl_pipeline.py for tasks to queue
+[2025-12-13T19:23:08.682+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:23:08.682+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:23:08.860+0000] {processor.py:840} INFO - DAG(s) 'seismic_etl_pipeline' retrieved from /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:23:08.879+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:23:08.879+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:23:08.892+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:23:08.892+0000] {dag.py:3820} INFO - Setting next_dagrun for seismic_etl_pipeline to 2025-12-13T00:00:00+00:00, run_after=2025-12-14T00:00:00+00:00
+[2025-12-13T19:23:08.903+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seismic_etl_pipeline.py took 0.224 seconds
+[2025-12-13T19:23:39.042+0000] {processor.py:161} INFO - Started process (PID=342) to work on /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:23:39.042+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seismic_etl_pipeline.py for tasks to queue
+[2025-12-13T19:23:39.042+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:23:39.042+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:23:39.222+0000] {processor.py:840} INFO - DAG(s) 'seismic_etl_pipeline' retrieved from /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:23:39.240+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:23:39.240+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:23:39.253+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:23:39.253+0000] {dag.py:3820} INFO - Setting next_dagrun for seismic_etl_pipeline to 2025-12-13T00:00:00+00:00, run_after=2025-12-14T00:00:00+00:00
+[2025-12-13T19:23:39.264+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seismic_etl_pipeline.py took 0.225 seconds
+[2025-12-13T19:24:09.408+0000] {processor.py:161} INFO - Started process (PID=365) to work on /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:24:09.409+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seismic_etl_pipeline.py for tasks to queue
+[2025-12-13T19:24:09.409+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:24:09.409+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:24:09.589+0000] {processor.py:840} INFO - DAG(s) 'seismic_etl_pipeline' retrieved from /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:24:09.607+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:24:09.607+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:24:09.621+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:24:09.621+0000] {dag.py:3820} INFO - Setting next_dagrun for seismic_etl_pipeline to 2025-12-13T00:00:00+00:00, run_after=2025-12-14T00:00:00+00:00
+[2025-12-13T19:24:09.632+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seismic_etl_pipeline.py took 0.226 seconds
+[2025-12-13T19:24:39.771+0000] {processor.py:161} INFO - Started process (PID=388) to work on /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:24:39.772+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seismic_etl_pipeline.py for tasks to queue
+[2025-12-13T19:24:39.772+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:24:39.772+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:24:39.952+0000] {processor.py:840} INFO - DAG(s) 'seismic_etl_pipeline' retrieved from /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:24:39.970+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:24:39.970+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:24:39.983+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:24:39.983+0000] {dag.py:3820} INFO - Setting next_dagrun for seismic_etl_pipeline to 2025-12-13T00:00:00+00:00, run_after=2025-12-14T00:00:00+00:00
+[2025-12-13T19:24:39.994+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seismic_etl_pipeline.py took 0.225 seconds
+[2025-12-13T19:25:10.134+0000] {processor.py:161} INFO - Started process (PID=411) to work on /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:25:10.135+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seismic_etl_pipeline.py for tasks to queue
+[2025-12-13T19:25:10.135+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:25:10.135+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:25:10.314+0000] {processor.py:840} INFO - DAG(s) 'seismic_etl_pipeline' retrieved from /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:25:10.333+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:25:10.332+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:25:10.347+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:25:10.347+0000] {dag.py:3820} INFO - Setting next_dagrun for seismic_etl_pipeline to 2025-12-13T00:00:00+00:00, run_after=2025-12-14T00:00:00+00:00
+[2025-12-13T19:25:10.357+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seismic_etl_pipeline.py took 0.225 seconds
+[2025-12-13T19:25:40.501+0000] {processor.py:161} INFO - Started process (PID=434) to work on /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:25:40.502+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seismic_etl_pipeline.py for tasks to queue
+[2025-12-13T19:25:40.502+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:25:40.502+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:25:40.681+0000] {processor.py:840} INFO - DAG(s) 'seismic_etl_pipeline' retrieved from /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:25:40.700+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:25:40.699+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:25:40.713+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:25:40.712+0000] {dag.py:3820} INFO - Setting next_dagrun for seismic_etl_pipeline to 2025-12-13T00:00:00+00:00, run_after=2025-12-14T00:00:00+00:00
+[2025-12-13T19:25:40.723+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seismic_etl_pipeline.py took 0.224 seconds
+[2025-12-13T19:26:10.865+0000] {processor.py:161} INFO - Started process (PID=457) to work on /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:26:10.866+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seismic_etl_pipeline.py for tasks to queue
+[2025-12-13T19:26:10.866+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:26:10.866+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:26:11.045+0000] {processor.py:840} INFO - DAG(s) 'seismic_etl_pipeline' retrieved from /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:26:11.063+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:26:11.063+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:26:11.077+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:26:11.077+0000] {dag.py:3820} INFO - Setting next_dagrun for seismic_etl_pipeline to 2025-12-13T00:00:00+00:00, run_after=2025-12-14T00:00:00+00:00
+[2025-12-13T19:26:11.088+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seismic_etl_pipeline.py took 0.225 seconds
+[2025-12-13T19:26:41.228+0000] {processor.py:161} INFO - Started process (PID=480) to work on /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:26:41.229+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/seismic_etl_pipeline.py for tasks to queue
+[2025-12-13T19:26:41.229+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:26:41.229+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:26:41.408+0000] {processor.py:840} INFO - DAG(s) 'seismic_etl_pipeline' retrieved from /opt/airflow/dags/seismic_etl_pipeline.py
+[2025-12-13T19:26:41.427+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:26:41.426+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:26:41.440+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:26:41.440+0000] {dag.py:3820} INFO - Setting next_dagrun for seismic_etl_pipeline to 2025-12-13T00:00:00+00:00, run_after=2025-12-14T00:00:00+00:00
+[2025-12-13T19:26:41.451+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/seismic_etl_pipeline.py took 0.225 seconds

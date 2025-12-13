@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seismic Analytics Dashboard</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=2">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=3">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -12,7 +12,7 @@
 <body>
     <header>
         <h1>🛢️ Seismic Analytics Dashboard</h1>
-        <p>Real-time Well Performance & Sensor Analysis</p>
+        <p>Real-time Well Performance & Sensor Analysis with ML Predictions</p>
     </header>
 
     <nav>
@@ -21,6 +21,7 @@
         <button onclick="showSection('performance')" class="nav-btn">Well Performance</button>
         <button onclick="showSection('sensors')" class="nav-btn">Sensor Analysis</button>
         <button onclick="showSection('surveys')" class="nav-btn">Survey Summary</button>
+        <button onclick="showSection('timetravel')" class="nav-btn">🕐 Time Travel & Prediction</button>
     </nav>
 
     <main>
@@ -134,12 +135,52 @@
                 </table>
             </div>
         </section>
+
+        <!-- NEW: Time Travel & Prediction Section -->
+        <section id="timetravel" class="dashboard-section">
+            <h2>🕐 Time Travel & ML Predictions</h2>
+            
+            <div class="timetravel-controls">
+                <div class="control-group">
+                    <h3>⏪ Time Travel (Historical Data)</h3>
+                    <label>Select Time Point:</label>
+                    <input type="range" id="timeSlider" min="0" max="20" value="20" />
+                    <span id="timeDisplay">Time: 20</span>
+                    <button onclick="loadTimeTravel()" class="btn-primary">Load Snapshot</button>
+                </div>
+                
+                <div class="control-group">
+                    <h3>🔮 ML Prediction (Future Trends)</h3>
+                    <label>Select Model:</label>
+                    <select id="modelSelect">
+                        <option value="linear">Linear Regression</option>
+                        <option value="random_forest">Random Forest</option>
+                    </select>
+                    <label>Periods to Predict:</label>
+                    <input type="number" id="periodsInput" value="5" min="1" max="10" />
+                    <button onclick="runPrediction()" class="btn-primary">Predict Future</button>
+                </div>
+            </div>
+
+            <div class="timetravel-results">
+                <div class="result-panel">
+                    <h3>Historical Snapshot</h3>
+                    <div id="snapshotStats"></div>
+                </div>
+                
+                <div class="result-panel">
+                    <h3>Prediction Results</h3>
+                    <div id="predictionStats"></div>
+                    <canvas id="predictionChart"></canvas>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>© 2025 SOCAR Hackathon - Track 3 Analytics | Powered by Flask & Docker</p>
+        <p>© 2025 SOCAR Hackathon - Track 3 Analytics | Powered by Flask, Docker & ML</p>
     </footer>
 
-    <script src="{{ url_for('static', filename='js/dashboard.js') }}?v=2"></script>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}?v=3"></script>
 </body>
 </html>

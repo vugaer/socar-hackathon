@@ -1,0 +1,95 @@
+[2025-12-13T19:20:35.575+0000] {processor.py:161} INFO - Started process (PID=186) to work on /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:20:35.576+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_validation_dag.py for tasks to queue
+[2025-12-13T19:20:35.576+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:20:35.576+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:20:35.601+0000] {processor.py:840} INFO - DAG(s) 'data_validation' retrieved from /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:20:35.816+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:20:35.815+0000] {override.py:1769} INFO - Created Permission View: can edit on DAG:data_validation
+[2025-12-13T19:20:35.821+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:20:35.821+0000] {override.py:1769} INFO - Created Permission View: can delete on DAG:data_validation
+[2025-12-13T19:20:35.826+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:20:35.826+0000] {override.py:1769} INFO - Created Permission View: can read on DAG:data_validation
+[2025-12-13T19:20:35.826+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:20:35.826+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:20:35.833+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:20:35.833+0000] {dag.py:3055} INFO - Creating ORM DAG for data_validation
+[2025-12-13T19:20:35.840+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:20:35.839+0000] {dag.py:3820} INFO - Setting next_dagrun for data_validation to 2025-12-13T18:00:00+00:00, run_after=2025-12-13T19:00:00+00:00
+[2025-12-13T19:20:35.851+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data_validation_dag.py took 0.279 seconds
+[2025-12-13T19:21:05.977+0000] {processor.py:161} INFO - Started process (PID=210) to work on /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:21:05.978+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_validation_dag.py for tasks to queue
+[2025-12-13T19:21:05.978+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:21:05.978+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:21:05.987+0000] {processor.py:840} INFO - DAG(s) 'data_validation' retrieved from /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:21:06.005+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:21:06.005+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:21:06.019+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:21:06.019+0000] {dag.py:3820} INFO - Setting next_dagrun for data_validation to 2025-12-13T18:00:00+00:00, run_after=2025-12-13T19:00:00+00:00
+[2025-12-13T19:21:06.030+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data_validation_dag.py took 0.055 seconds
+[2025-12-13T19:21:36.341+0000] {processor.py:161} INFO - Started process (PID=233) to work on /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:21:36.341+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_validation_dag.py for tasks to queue
+[2025-12-13T19:21:36.342+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:21:36.342+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:21:36.350+0000] {processor.py:840} INFO - DAG(s) 'data_validation' retrieved from /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:21:36.367+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:21:36.367+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:21:36.379+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:21:36.379+0000] {dag.py:3820} INFO - Setting next_dagrun for data_validation to 2025-12-13T18:00:00+00:00, run_after=2025-12-13T19:00:00+00:00
+[2025-12-13T19:21:36.390+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data_validation_dag.py took 0.051 seconds
+[2025-12-13T19:22:06.701+0000] {processor.py:161} INFO - Started process (PID=256) to work on /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:22:06.702+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_validation_dag.py for tasks to queue
+[2025-12-13T19:22:06.702+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:22:06.702+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:22:06.710+0000] {processor.py:840} INFO - DAG(s) 'data_validation' retrieved from /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:22:06.727+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:22:06.727+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:22:06.740+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:22:06.740+0000] {dag.py:3820} INFO - Setting next_dagrun for data_validation to 2025-12-13T18:00:00+00:00, run_after=2025-12-13T19:00:00+00:00
+[2025-12-13T19:22:06.750+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data_validation_dag.py took 0.051 seconds
+[2025-12-13T19:22:37.062+0000] {processor.py:161} INFO - Started process (PID=279) to work on /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:22:37.063+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_validation_dag.py for tasks to queue
+[2025-12-13T19:22:37.063+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:22:37.063+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:22:37.071+0000] {processor.py:840} INFO - DAG(s) 'data_validation' retrieved from /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:22:37.088+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:22:37.088+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:22:37.101+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:22:37.101+0000] {dag.py:3820} INFO - Setting next_dagrun for data_validation to 2025-12-13T18:00:00+00:00, run_after=2025-12-13T19:00:00+00:00
+[2025-12-13T19:22:37.111+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data_validation_dag.py took 0.051 seconds
+[2025-12-13T19:23:07.422+0000] {processor.py:161} INFO - Started process (PID=302) to work on /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:23:07.426+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_validation_dag.py for tasks to queue
+[2025-12-13T19:23:07.427+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:23:07.426+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:23:07.435+0000] {processor.py:840} INFO - DAG(s) 'data_validation' retrieved from /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:23:07.452+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:23:07.452+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:23:07.465+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:23:07.465+0000] {dag.py:3820} INFO - Setting next_dagrun for data_validation to 2025-12-13T18:00:00+00:00, run_after=2025-12-13T19:00:00+00:00
+[2025-12-13T19:23:07.475+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data_validation_dag.py took 0.055 seconds
+[2025-12-13T19:23:37.782+0000] {processor.py:161} INFO - Started process (PID=325) to work on /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:23:37.783+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_validation_dag.py for tasks to queue
+[2025-12-13T19:23:37.783+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:23:37.783+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:23:37.792+0000] {processor.py:840} INFO - DAG(s) 'data_validation' retrieved from /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:23:37.811+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:23:37.811+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:23:37.825+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:23:37.824+0000] {dag.py:3820} INFO - Setting next_dagrun for data_validation to 2025-12-13T18:00:00+00:00, run_after=2025-12-13T19:00:00+00:00
+[2025-12-13T19:23:37.835+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data_validation_dag.py took 0.055 seconds
+[2025-12-13T19:24:08.146+0000] {processor.py:161} INFO - Started process (PID=348) to work on /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:24:08.146+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_validation_dag.py for tasks to queue
+[2025-12-13T19:24:08.147+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:24:08.147+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:24:08.156+0000] {processor.py:840} INFO - DAG(s) 'data_validation' retrieved from /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:24:08.175+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:24:08.175+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:24:08.189+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:24:08.189+0000] {dag.py:3820} INFO - Setting next_dagrun for data_validation to 2025-12-13T18:00:00+00:00, run_after=2025-12-13T19:00:00+00:00
+[2025-12-13T19:24:08.201+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data_validation_dag.py took 0.057 seconds
+[2025-12-13T19:24:38.512+0000] {processor.py:161} INFO - Started process (PID=371) to work on /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:24:38.513+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_validation_dag.py for tasks to queue
+[2025-12-13T19:24:38.513+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:24:38.513+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:24:38.522+0000] {processor.py:840} INFO - DAG(s) 'data_validation' retrieved from /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:24:38.539+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:24:38.539+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:24:38.552+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:24:38.552+0000] {dag.py:3820} INFO - Setting next_dagrun for data_validation to 2025-12-13T18:00:00+00:00, run_after=2025-12-13T19:00:00+00:00
+[2025-12-13T19:24:38.562+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data_validation_dag.py took 0.052 seconds
+[2025-12-13T19:25:08.874+0000] {processor.py:161} INFO - Started process (PID=394) to work on /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:25:08.874+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_validation_dag.py for tasks to queue
+[2025-12-13T19:25:08.875+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:25:08.874+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:25:08.883+0000] {processor.py:840} INFO - DAG(s) 'data_validation' retrieved from /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:25:08.900+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:25:08.900+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:25:08.913+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:25:08.913+0000] {dag.py:3820} INFO - Setting next_dagrun for data_validation to 2025-12-13T18:00:00+00:00, run_after=2025-12-13T19:00:00+00:00
+[2025-12-13T19:25:08.923+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data_validation_dag.py took 0.052 seconds
+[2025-12-13T19:25:39.243+0000] {processor.py:161} INFO - Started process (PID=417) to work on /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:25:39.243+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_validation_dag.py for tasks to queue
+[2025-12-13T19:25:39.243+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:25:39.243+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:25:39.252+0000] {processor.py:840} INFO - DAG(s) 'data_validation' retrieved from /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:25:39.271+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:25:39.271+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:25:39.286+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:25:39.286+0000] {dag.py:3820} INFO - Setting next_dagrun for data_validation to 2025-12-13T18:00:00+00:00, run_after=2025-12-13T19:00:00+00:00
+[2025-12-13T19:25:39.296+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data_validation_dag.py took 0.056 seconds
+[2025-12-13T19:26:09.604+0000] {processor.py:161} INFO - Started process (PID=440) to work on /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:26:09.609+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_validation_dag.py for tasks to queue
+[2025-12-13T19:26:09.609+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:26:09.609+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:26:09.618+0000] {processor.py:840} INFO - DAG(s) 'data_validation' retrieved from /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:26:09.635+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:26:09.635+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:26:09.647+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:26:09.647+0000] {dag.py:3820} INFO - Setting next_dagrun for data_validation to 2025-12-13T18:00:00+00:00, run_after=2025-12-13T19:00:00+00:00
+[2025-12-13T19:26:09.658+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data_validation_dag.py took 0.056 seconds
+[2025-12-13T19:26:39.969+0000] {processor.py:161} INFO - Started process (PID=463) to work on /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:26:39.970+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data_validation_dag.py for tasks to queue
+[2025-12-13T19:26:39.970+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:26:39.970+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:26:39.979+0000] {processor.py:840} INFO - DAG(s) 'data_validation' retrieved from /opt/airflow/dags/data_validation_dag.py
+[2025-12-13T19:26:39.996+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:26:39.996+0000] {dag.py:3033} INFO - Sync 1 DAGs
+[2025-12-13T19:26:40.009+0000] {logging_mixin.py:188} INFO - [2025-12-13T19:26:40.008+0000] {dag.py:3820} INFO - Setting next_dagrun for data_validation to 2025-12-13T18:00:00+00:00, run_after=2025-12-13T19:00:00+00:00
+[2025-12-13T19:26:40.019+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data_validation_dag.py took 0.052 seconds

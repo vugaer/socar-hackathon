@@ -3,9 +3,12 @@ let performanceData = [];
 let sensorData = [];
 let surveyData = [];
 let map = null;
+let predictionChart = null;
+let timeRange = { min: 0, max: 20, current: 20 };
 
 document.addEventListener('DOMContentLoaded', function() {
     loadAllData();
+    initializeTimeTravel();
 });
 
 async function loadAllData() {
@@ -33,13 +36,144 @@ async function loadAllData() {
     }
 }
 
+async function initializeTimeTravel() {
+    try {
+        const range = await fetch('/api/time_range').then(r => r.json());
+        timeRange = range;
+        
+        const slider = document.getElementById('timeSlider');
+        slider.min = range.min_time;
+        slider.max = range.max_time;
+        slider.value = range.current_time;
+        
+        slider.oninput = function() {
+            document.getElementById('timeDisplay').textContent = `Time: ${this.value}`;
+        };
+        
+        console.log('✓ Time travel initialized');
+    } catch (error) {
+        console.error('Time travel init error:', error);
+    }
+}
+
+async function loadTimeTravel() {
+    const timePoint = document.getElementById('timeSlider').value;
+    
+    try {
+        const snapshot = await fetch(`/api/time_travel/${timePoint}`).then(r => r.json());
+        
+        document.getElementById('snapshotStats').innerHTML = `
+            <div class="stat-box">
+                <strong>Time Point:</strong> ${snapshot.time_point}
+            </div>
+            <div class="stat-box">
+                <strong>Wells Active:</strong> ${snapshot.wells_at_time}
+            </div>
+            <div class="stat-box">
+                <strong>Total Readings:</strong> ${snapshot.total_readings.toLocaleString()}
+            </div>
+            <div class="stat-box">
+                <strong>Avg Amplitude:</strong> ${snapshot.avg_amplitude.toFixed(4)}
+            </div>
+            <div class="stat-box">
+                <strong>Data Quality:</strong> ${(snapshot.avg_quality * 100).toFixed(1)}%
+            </div>
+            <h4>Wells at this time:</h4>
+            <ul>
+                ${snapshot.wells.slice(0, 10).map(w => `
+                    <li>Well ${w.well_id} (${w.well_name}): ${w.avg_amplitude.toFixed(2)} amplitude, ${w.total_readings} readings</li>
+                `).join('')}
+            </ul>
+        `;
+        
+        console.log('✓ Time travel snapshot loaded');
+    } catch (error) {
+        console.error('Time travel error:', error);
+        document.getElementById('snapshotStats').innerHTML = `<p style="color: red;">Error: ${error}</p>`;
+    }
+}
+
+async function runPrediction() {
+    const model = document.getElementById('modelSelect').value;
+    const periods = document.getElementById('periodsInput').value;
+    
+    document.getElementById('predictionStats').innerHTML = '<p>Predicting... Please wait...</p>';
+    
+    try {
+        const result = await fetch(`/api/predict?model=${model}&periods=${periods}`).then(r => r.json());
+        
+        document.getElementById('predictionStats').innerHTML = `
+            <div class="stat-box">
+                <strong>Model:</strong> ${result.model === 'linear' ? 'Linear Regression' : 'Random Forest'}
+            </div>
+            <div class="stat-box">
+                <strong>Periods:</strong> ${result.periods} future time points
+            </div>
+            <h4>Predictions:</h4>
+            <ul>
+                ${result.predictions.map(p => `
+                    <li>Time ${p.time_index}: Amplitude = ${p.predicted_amplitude.toFixed(4)}</li>
+                `).join('')}
+            </ul>
+        `;
+        
+        // Create prediction chart
+        renderPredictionChart(result.predictions);
+        
+        console.log('✓ Prediction complete');
+    } catch (error) {
+        console.error('Prediction error:', error);
+        document.getElementById('predictionStats').innerHTML = `<p style="color: red;">Error: ${error}</p>`;
+    }
+}
+
+function renderPredictionChart(predictions) {
+    const ctx = document.getElementById('predictionChart');
+    
+    if (predictionChart) {
+        predictionChart.destroy();
+    }
+    
+    predictionChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: predictions.map(p => `T${p.time_index}`),
+            datasets: [{
+                label: 'Predicted Amplitude',
+                data: predictions.map(p => p.predicted_amplitude),
+                borderColor: 'rgba(102, 126, 234, 1)',
+                backgroundColor: 'rgba(102, 126, 234, 0.2)',
+                fill: true,
+                tension: 0.4
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Future Amplitude Predictions'
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: false,
+                    title: { display: true, text: 'Amplitude' }
+                },
+                x: {
+                    title: { display: true, text: 'Time Point' }
+                }
+            }
+        }
+    });
+}
+
 function updateStats(stats) {
     document.getElementById('total-wells').textContent = stats.total_wells.toLocaleString();
     document.getElementById('total-sensors').textContent = stats.total_sensors.toLocaleString();
     document.getElementById('total-readings').textContent = stats.total_readings.toLocaleString();
     document.getElementById('data-quality').textContent = (stats.avg_data_quality * 100).toFixed(1) + '%';
     document.getElementById('total-anomalies').textContent = stats.total_anomalies.toLocaleString();
-    // FIX: Show 4 decimal places for amplitude
     document.getElementById('avg-amplitude').textContent = stats.avg_amplitude.toFixed(4);
 }
 
@@ -109,7 +243,6 @@ function renderTables() {
         </tr>
     `).join('');
     
-    // FIX: Show 4 decimal places for survey amplitude
     document.getElementById('surveyBody').innerHTML = surveyData.map(row => `
         <tr>
             <td>${row.survey_type || 'N/A'}</td>
