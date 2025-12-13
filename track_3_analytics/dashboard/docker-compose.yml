@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  dashboard:
+    build: .
+    container_name: seismic-dashboard
+    ports:
+      - "80:80"
+    volumes:
+      - ./data_marts:/app/data_marts:ro
+    restart: unless-stopped
+    environment:
+      - FLASK_ENV=production

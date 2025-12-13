@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seismic Analytics Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=2">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <h1>🛢️ Seismic Analytics Dashboard</h1>
+        <p>Real-time Well Performance & Sensor Analysis</p>
+    </header>
+
+    <nav>
+        <button onclick="showSection('overview')" class="nav-btn active">Overview</button>
+        <button onclick="showSection('map')" class="nav-btn">Wells Map</button>
+        <button onclick="showSection('performance')" class="nav-btn">Well Performance</button>
+        <button onclick="showSection('sensors')" class="nav-btn">Sensor Analysis</button>
+        <button onclick="showSection('surveys')" class="nav-btn">Survey Summary</button>
+    </nav>
+
+    <main>
+        <section id="overview" class="dashboard-section active">
+            <h2>📊 Dashboard Overview</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">🏭</div>
+                    <div class="stat-value" id="total-wells">Loading...</div>
+                    <div class="stat-label">Total Wells</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📡</div>
+                    <div class="stat-value" id="total-sensors">Loading...</div>
+                    <div class="stat-label">Total Sensors</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📈</div>
+                    <div class="stat-value" id="total-readings">Loading...</div>
+                    <div class="stat-label">Total Readings</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-value" id="data-quality">Loading...</div>
+                    <div class="stat-label">Data Quality</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⚠️</div>
+                    <div class="stat-value" id="total-anomalies">Loading...</div>
+                    <div class="stat-label">Anomalies Detected</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-value" id="avg-amplitude">Loading...</div>
+                    <div class="stat-label">Avg Amplitude</div>
+                </div>
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <h3>Amplitude Distribution</h3>
+                    <canvas id="amplitudeChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Data Quality by Source</h3>
+                    <canvas id="qualityChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="map" class="dashboard-section">
+            <h2>🗺️ Wells Map</h2>
+            <div id="mapContainer" style="height: 600px; border-radius: 8px;"></div>
+        </section>
+
+        <section id="performance" class="dashboard-section">
+            <h2>🎯 Well Performance Analysis</h2>
+            <div class="table-container">
+                <table id="performanceTable">
+                    <thead>
+                        <tr>
+                            <th>Well ID</th>
+                            <th>Well Name</th>
+                            <th>Source Format</th>
+                            <th>Total Readings</th>
+                            <th>Avg Amplitude</th>
+                            <th>Data Quality</th>
+                            <th>Anomalies</th>
+                        </tr>
+                    </thead>
+                    <tbody id="performanceBody"><tr><td colspan="7">Loading...</td></tr></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="sensors" class="dashboard-section">
+            <h2>📡 Sensor Reliability Analysis</h2>
+            <div class="table-container">
+                <table id="sensorTable">
+                    <thead>
+                        <tr>
+                            <th>Sensor ID</th>
+                            <th>Sensor Type</th>
+                            <th>Manufacturer</th>
+                            <th>Total Readings</th>
+                            <th>Data Quality</th>
+                            <th>Avg Amplitude</th>
+                        </tr>
+                    </thead>
+                    <tbody id="sensorBody"><tr><td colspan="6">Loading...</td></tr></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="surveys" class="dashboard-section">
+            <h2>📋 Survey Summary</h2>
+            <div class="table-container">
+                <table id="surveyTable">
+                    <thead>
+                        <tr>
+                            <th>Survey Type</th>
+                            <th>Source Format</th>
+                            <th>Wells Surveyed</th>
+                            <th>Total Readings</th>
+                            <th>Avg Amplitude</th>
+                            <th>Avg Data Quality</th>
+                        </tr>
+                    </thead>
+                    <tbody id="surveyBody"><tr><td colspan="6">Loading...</td></tr></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 SOCAR Hackathon - Track 3 Analytics | Powered by Flask & Docker</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}?v=2"></script>
+</body>
+</html>
