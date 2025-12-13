@@ -4,7 +4,7 @@ DATA_DIR=""
 while [[ $# -gt 0 ]]; do
     case $1 in
         --data-dir)
-            DATA_DIR="$1"
+            DATA_DIR="$2"
             shift 2
             ;;
         *)
