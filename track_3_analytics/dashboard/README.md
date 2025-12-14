@@ -621,3 +621,59 @@ WORKDIR /app
 COPY . /app
 
 RUN pip install -r requirements.txt
+
+EXPOSE 80
+CMD ["python3", "app.py"]
+```
+
+```bash
+docker build -t drillica-dashboard .
+docker run -p 80:80 -v /data:/app/data_marts drillica-dashboard
+```
+
+### Production (Kubernetes)
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: drillica-dashboard
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: dashboard
+  template:
+    spec:
+      containers:
+      - name: dashboard
+        image: drillica-dashboard:latest
+        ports:
+        - containerPort: 80
+```
+
+---
+
+## Future Enhancements
+
+1. **Real-time Data Streaming**: WebSocket integration for live updates
+2. **Machine Learning**: Predictive anomaly detection
+3. **Export Functionality**: Download charts and tables as PDF/Excel
+4. **User Authentication**: Role-based access control
+5. **Custom Dashboards**: User-defined widget layouts
+
+---
+
+## References
+
+- Flask Documentation: https://flask.palletsprojects.com/
+- Apache Iceberg: https://iceberg.apache.org/
+- Leaflet.js: https://leafletjs.com/
+- Chart.js: https://www.chartjs.org/
+
+---
+
+## License
+
+MIT License - Part of Drillica Platform
+
