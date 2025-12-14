@@ -5,7 +5,16 @@
 [![Apache Airflow](https://img.shields.io/badge/Airflow-2.5+-red.svg)](https://airflow.apache.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-<img src="https://i.imgur.com/kz1SQIQ.jpeg" width="200">
+<style>
+  .center {
+    display: block; /* Images are inline by default, so they need to be changed to block-level elements */
+    margin-left: auto; /* Automatically calculates equal left margin */
+    margin-right: auto; /* Automatically calculates equal right margin */
+  }
+</style>
+
+<img src="https://i.imgur.com/kz1SQIQ.jpeg" width="200" class="center">
+
 
 ## Executive Summary
 
