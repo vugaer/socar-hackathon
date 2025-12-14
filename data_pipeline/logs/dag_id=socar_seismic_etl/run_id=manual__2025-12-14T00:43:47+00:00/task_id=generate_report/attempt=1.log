@@ -1,0 +1,31 @@
+[2025-12-14T00:43:51.593+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-12-14T00:43:51.608+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: socar_seismic_etl.generate_report manual__2025-12-14T00:43:47+00:00 [queued]>
+[2025-12-14T00:43:51.613+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: socar_seismic_etl.generate_report manual__2025-12-14T00:43:47+00:00 [queued]>
+[2025-12-14T00:43:51.613+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 3
+[2025-12-14T00:43:51.622+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): generate_report> on 2025-12-14 00:43:47+00:00
+[2025-12-14T00:43:51.628+0000] {standard_task_runner.py:72} INFO - Started process 355 to run task
+[2025-12-14T00:43:51.630+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'socar_seismic_etl', 'generate_report', 'manual__2025-12-14T00:43:47+00:00', '--job-id', '84', '--raw', '--subdir', 'DAGS_FOLDER/socar_seismic_etl.py', '--cfg-path', '/tmp/tmpcmr9fuua']
+[2025-12-14T00:43:51.632+0000] {standard_task_runner.py:105} INFO - Job 84: Subtask generate_report
+[2025-12-14T00:43:51.672+0000] {task_command.py:467} INFO - Running <TaskInstance: socar_seismic_etl.generate_report manual__2025-12-14T00:43:47+00:00 [running]> on host a965f30939f8
+[2025-12-14T00:43:51.749+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='socar-hackathon' AIRFLOW_CTX_DAG_ID='socar_seismic_etl' AIRFLOW_CTX_TASK_ID='generate_report' AIRFLOW_CTX_EXECUTION_DATE='2025-12-14T00:43:47+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-14T00:43:47+00:00'
+[2025-12-14T00:43:51.750+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-12-14T00:43:51.759+0000] {logging_mixin.py:190} INFO - ======================================================================
+[2025-12-14T00:43:51.759+0000] {logging_mixin.py:190} INFO - ETL PIPELINE REPORT
+[2025-12-14T00:43:51.759+0000] {logging_mixin.py:190} INFO - ======================================================================
+[2025-12-14T00:43:51.808+0000] {logging_mixin.py:190} INFO - 
+📊 Summary:
+[2025-12-14T00:43:51.808+0000] {logging_mixin.py:190} INFO -   Extracted: 10,820 measurements
+[2025-12-14T00:43:51.808+0000] {logging_mixin.py:190} INFO -   Transformed: 20 wells
+[2025-12-14T00:43:51.808+0000] {logging_mixin.py:190} INFO -   Anomalies: 0
+[2025-12-14T00:43:51.808+0000] {logging_mixin.py:190} INFO -   PostgreSQL: 20 records
+[2025-12-14T00:43:51.808+0000] {logging_mixin.py:190} INFO -   MongoDB: 10,000 documents
+[2025-12-14T00:43:51.808+0000] {logging_mixin.py:190} INFO -   JSON: /opt/***/data/exports/well_analytics_20251214.json
+[2025-12-14T00:43:51.808+0000] {logging_mixin.py:190} INFO - 
+✅ Report saved: /opt/***/data/reports/etl_report_20251214_004351.json
+[2025-12-14T00:43:51.808+0000] {logging_mixin.py:190} INFO - ======================================================================
+[2025-12-14T00:43:51.809+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-12-14T00:43:51.818+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-12-14T00:43:51.818+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=socar_seismic_etl, task_id=generate_report, run_id=manual__2025-12-14T00:43:47+00:00, execution_date=20251214T004347, start_date=20251214T004351, end_date=20251214T004351
+[2025-12-14T00:43:51.843+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-12-14T00:43:51.859+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-12-14T00:43:51.861+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

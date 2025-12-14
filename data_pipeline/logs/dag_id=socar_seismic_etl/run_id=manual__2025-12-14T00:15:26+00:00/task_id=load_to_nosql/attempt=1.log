@@ -1,0 +1,26 @@
+[2025-12-14T00:31:27.571+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-12-14T00:31:27.587+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: socar_seismic_etl.load_to_nosql manual__2025-12-14T00:15:26+00:00 [queued]>
+[2025-12-14T00:31:27.593+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: socar_seismic_etl.load_to_nosql manual__2025-12-14T00:15:26+00:00 [queued]>
+[2025-12-14T00:31:27.593+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 3
+[2025-12-14T00:31:27.602+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): load_to_nosql> on 2025-12-14 00:15:26+00:00
+[2025-12-14T00:31:27.608+0000] {standard_task_runner.py:72} INFO - Started process 719 to run task
+[2025-12-14T00:31:27.612+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'socar_seismic_etl', 'load_to_nosql', 'manual__2025-12-14T00:15:26+00:00', '--job-id', '47', '--raw', '--subdir', 'DAGS_FOLDER/socar_seismic_etl.py', '--cfg-path', '/tmp/tmpwe5cd0cn']
+[2025-12-14T00:31:27.613+0000] {standard_task_runner.py:105} INFO - Job 47: Subtask load_to_nosql
+[2025-12-14T00:31:27.660+0000] {task_command.py:467} INFO - Running <TaskInstance: socar_seismic_etl.load_to_nosql manual__2025-12-14T00:15:26+00:00 [running]> on host a965f30939f8
+[2025-12-14T00:31:27.747+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='socar-hackathon' AIRFLOW_CTX_DAG_ID='socar_seismic_etl' AIRFLOW_CTX_TASK_ID='load_to_nosql' AIRFLOW_CTX_EXECUTION_DATE='2025-12-14T00:15:26+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-14T00:15:26+00:00'
+[2025-12-14T00:31:27.748+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-12-14T00:31:28.003+0000] {logging_mixin.py:190} INFO - ======================================================================
+[2025-12-14T00:31:28.004+0000] {logging_mixin.py:190} INFO - LOAD: MongoDB
+[2025-12-14T00:31:28.004+0000] {logging_mixin.py:190} INFO - ======================================================================
+[2025-12-14T00:31:28.091+0000] {logging_mixin.py:190} INFO - ✓ Cleared 10000 old records
+[2025-12-14T00:31:28.128+0000] {logging_mixin.py:190} INFO - ✓ Inserting 10,000 documents...
+[2025-12-14T00:31:28.197+0000] {logging_mixin.py:190} INFO - ✓ Inserted 10,000 documents to MongoDB
+[2025-12-14T00:31:28.197+0000] {logging_mixin.py:190} INFO -   Database: socar_seismic
+[2025-12-14T00:31:28.198+0000] {logging_mixin.py:190} INFO -   Collection: measurements
+[2025-12-14T00:31:28.198+0000] {logging_mixin.py:190} INFO - ======================================================================
+[2025-12-14T00:31:28.200+0000] {python.py:240} INFO - Done. Returned value was: 10000
+[2025-12-14T00:31:28.223+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-12-14T00:31:28.223+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=socar_seismic_etl, task_id=load_to_nosql, run_id=manual__2025-12-14T00:15:26+00:00, execution_date=20251214T001526, start_date=20251214T003127, end_date=20251214T003128
+[2025-12-14T00:31:28.265+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-12-14T00:31:28.285+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-14T00:31:28.287+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

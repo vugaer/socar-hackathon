@@ -1,3 +1,20 @@
+#!/bin/bash
+
+echo "================================================"
+echo " SOCAR Pipeline - Fix & Deploy Script"
+echo "================================================"
+
+# Step 1: Stop everything
+echo ""
+echo "Step 1: Cleaning old containers..."
+sudo docker-compose down -v
+sudo docker rm -f socar_airflow_init socar_postgres socar_mongodb 2>/dev/null || true
+
+# Step 2: Fix docker-compose.yml
+echo ""
+echo "Step 2: Fixing docker-compose.yml..."
+
+cat > docker-compose.yml << 'EOF'
 version: '3.8'
 
 x-airflow-common: &airflow-common
@@ -136,3 +153,61 @@ volumes:
 networks:
   socar_network:
     driver: bridge
+EOF
+
+echo "✅ docker-compose.yml fixed"
+
+# Step 3: Set Airflow UID
+echo ""
+echo "Step 3: Setting Airflow UID..."
+echo "AIRFLOW_UID=$(id -u)" > .env
+cat .env
+
+# Step 4: Run init
+echo ""
+echo "Step 4: Running airflow-init..."
+sudo docker-compose up airflow-init
+
+# Wait for init to complete
+sleep 5
+
+# Step 5: Start all services
+echo ""
+echo "Step 5: Starting all services..."
+sudo docker-compose up -d postgres mongodb airflow-webserver airflow-scheduler
+
+# Wait for services to stabilize
+echo ""
+echo "⏳ Waiting 50 seconds for services to start..."
+sleep 50
+
+# Step 6: Check status
+echo ""
+echo "================================================"
+echo " Service Status"
+echo "================================================"
+sudo docker-compose ps
+
+echo ""
+echo "================================================"
+echo " Checking Airflow Health"
+echo "================================================"
+curl -s http://localhost:8080/health | grep -q "healthy" && echo "✅ Airflow Webserver is healthy!" || echo "⚠ Webserver still starting..."
+
+echo ""
+echo "================================================"
+echo " ✅ DEPLOYMENT COMPLETE"
+echo "================================================"
+echo ""
+echo "🌐 Airflow UI: http://localhost:8080"
+echo "👤 Username: airflow"
+echo "🔑 Password: airflow"
+echo ""
+echo "Next steps:"
+echo "  1. Open http://localhost:8080 in browser"
+echo "  2. Login with airflow/airflow"
+echo "  3. Check if DAG 'socar_seismic_etl' appears"
+echo ""
+echo "If DAG is not there yet, run:"
+echo "  sudo docker-compose restart airflow-scheduler"
+echo ""
