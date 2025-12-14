@@ -13,24 +13,24 @@ This module implements **Data Vault 2.0** methodology for seismic data warehousi
 │                   DATA VAULT 2.0 ARCHITECTURE                    │
 ├──────────────────────────────────────────────────────────────────┤
 │                                                                  │
-│  HUB TABLES (Business Keys)                                     │
-│  ├── hub_well          → well_id (business key)                 │
-│  ├── hub_survey        → survey_type_id (business key)          │
-│  └── hub_sensor        → sensor_id (business key)               │
+│  HUB TABLES (Business Keys)                                      │
+│  ├── hub_well          → well_id (business key)                  │
+│  ├── hub_survey        → survey_type_id (business key)           │
+│  └── hub_sensor        → sensor_id (business key)                │
 │                                                                  │
-│  LINK TABLES (Relationships)                                    │
-│  └── link_seismic_reading  → (well + survey + sensor)           │
+│  LINK TABLES (Relationships)                                     │
+│  └── link_seismic_reading  → (well + survey + sensor)            │
 │                                                                  │
-│  SATELLITE TABLES (Descriptive Attributes)                      │
-│  ├── sat_well_details          → Well metadata                  │
-│  ├── sat_survey_details        → Survey metadata                │
-│  ├── sat_sensor_details        → Sensor metadata                │
-│  └── sat_seismic_measurements  → Actual seismic readings        │
+│  SATELLITE TABLES (Descriptive Attributes)                       │
+│  ├── sat_well_details          → Well metadata                   │
+│  ├── sat_survey_details        → Survey metadata                 │
+│  ├── sat_sensor_details        → Sensor metadata                 │
+│  └── sat_seismic_measurements  → Actual seismic readings         │
 │                                                                  │
-│  METADATA (Audit Columns)                                       │
-│  ├── load_timestamp    → ETL execution time                     │
-│  ├── record_source     → Source file/system                     │
-│  └── hash_diff         → Change detection hash                  │
+│  METADATA (Audit Columns)                                        │
+│  ├── load_timestamp    → ETL execution time                      │
+│  ├── record_source     → Source file/system                      │
+│  └── hash_diff         → Change detection hash                   │
 │                                                                  │
 └──────────────────────────────────────────────────────────────────┘
 ```
