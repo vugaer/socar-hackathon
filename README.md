@@ -5,7 +5,7 @@
 [![Apache Airflow](https://img.shields.io/badge/Airflow-2.5+-red.svg)](https://airflow.apache.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-<img src="https://github.com/favicon.ico" width="200">
+<img src="https://i.imgur.com/kz1SQIQ.jpeg" width="200">
 
 ## Executive Summary
 
