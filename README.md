@@ -5,6 +5,10 @@
 [![Apache Airflow](https://img.shields.io/badge/Airflow-2.5+-red.svg)](https://airflow.apache.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
+<p align="center">
+  <img src="https://i.imgur.com/kz1SQIQ.jpeg" alt="Drillica Logo">
+</p>
+
 ## Executive Summary
 
 **Drillica** is a production-grade, enterprise-level seismic data analytics platform designed for modern petroleum engineering operations. This comprehensive solution addresses the complete lifecycle of seismic data management, from legacy format recovery through advanced dimensional analytics and real-time visualization.
@@ -16,30 +20,30 @@
 │                     DRILLICA PLATFORM ARCHITECTURE                      │
 ├─────────────────────────────────────────────────────────────────────────┤
 │                                                                         │
-│  Layer 1: DATA INGESTION & FORENSICS                                  │
-│  ├── CaspianPetro Library (Custom SGX Parser)                         │
-│  ├── Parquet Recovery Engine                                          │
-│  └── Forensic Data Extraction                                         │
+│  Layer 1: DATA INGESTION & FORENSICS                                    │
+│  ├── CaspianPetro Library (Custom SGX Parser)                           │
+│  ├── Parquet Recovery Engine                                            │
+│  └── Forensic Data Extraction                                           │
 │                                                                         │
-│  Layer 2: DATA VAULT 2.0 (Raw Data Architecture)                     │
-│  ├── Hub Tables (Business Keys)                                       │
-│  ├── Link Tables (Relationships)                                      │
-│  └── Satellite Tables (Historical Attributes)                         │
+│  Layer 2: DATA VAULT 2.0 (Raw Data Architecture)                        │
+│  ├── Hub Tables (Business Keys)                                         │
+│  ├── Link Tables (Relationships)                                        │
+│  └── Satellite Tables (Historical Attributes)                           │
 │                                                                         │
-│  Layer 3: ETL ORCHESTRATION (Apache Airflow)                          │
-│  ├── Scheduled Data Pipelines                                         │
-│  ├── Multi-Target Loading (PostgreSQL, MongoDB, JSON)                 │
-│  └── Anomaly Detection & Data Quality                                 │
+│  Layer 3: ETL ORCHESTRATION (Apache Airflow)                            │
+│  ├── Scheduled Data Pipelines                                           │
+│  ├── Multi-Target Loading (PostgreSQL, MongoDB, JSON)                   │
+│  └── Anomaly Detection & Data Quality                                   │
 │                                                                         │
-│  Layer 4: DIMENSIONAL ANALYTICS (Star Schema)                         │
-│  ├── Dimension Tables (Time, Well, Sensor, Source)                    │
-│  ├── Fact Tables (Sensor Readings, Survey Events)                     │
-│  └── Data Marts (Pre-aggregated Business Views)                       │
+│  Layer 4: DIMENSIONAL ANALYTICS (Star Schema)                           │
+│  ├── Dimension Tables (Time, Well, Sensor, Source)                      │
+│  ├── Fact Tables (Sensor Readings, Survey Events)                       │
+│  └── Data Marts (Pre-aggregated Business Views)                         │
 │                                                                         │
-│  Layer 5: VISUALIZATION & TIME TRAVEL                                 │
-│  ├── Interactive Web Dashboard (Flask)                                │
-│  ├── Apache Iceberg (Time Travel Queries)                             │
-│  └── Real-time Analytics API                                          │
+│  Layer 5: VISUALIZATION & TIME TRAVEL                                   │
+│  ├── Interactive Web Dashboard (Flask)                                  │
+│  ├── Apache Iceberg (Time Travel Queries)                               │
+│  └── Real-time Analytics API                                            │
 │                                                                         │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
