@@ -9,7 +9,7 @@
     "anomaly_count":0,
     "quality_score":0.9365079365,
     "well_name":"WELL-1",
-    "processed_at":"2025-12-14T01:28:14.935"
+    "processed_at":"2025-12-14T06:35:46.418"
   },
   {
     "well_id":2,
@@ -21,7 +21,7 @@
     "anomaly_count":0,
     "quality_score":0.95,
     "well_name":"WELL-2",
-    "processed_at":"2025-12-14T01:28:14.935"
+    "processed_at":"2025-12-14T06:35:46.418"
   },
   {
     "well_id":3,
@@ -33,7 +33,7 @@
     "anomaly_count":0,
     "quality_score":0.966442953,
     "well_name":"WELL-3",
-    "processed_at":"2025-12-14T01:28:14.935"
+    "processed_at":"2025-12-14T06:35:46.418"
   },
   {
     "well_id":4,
@@ -45,7 +45,7 @@
     "anomaly_count":0,
     "quality_score":0.944,
     "well_name":"WELL-4",
-    "processed_at":"2025-12-14T01:28:14.935"
+    "processed_at":"2025-12-14T06:35:46.418"
   },
   {
     "well_id":5,
@@ -57,7 +57,7 @@
     "anomaly_count":0,
     "quality_score":0.9183673469,
     "well_name":"WELL-5",
-    "processed_at":"2025-12-14T01:28:14.935"
+    "processed_at":"2025-12-14T06:35:46.418"
   },
   {
     "well_id":6,
@@ -69,7 +69,7 @@
     "anomaly_count":0,
     "quality_score":0.9294871795,
     "well_name":"WELL-6",
-    "processed_at":"2025-12-14T01:28:14.935"
+    "processed_at":"2025-12-14T06:35:46.418"
   },
   {
     "well_id":7,
@@ -81,7 +81,7 @@
     "anomaly_count":0,
     "quality_score":0.9219858156,
     "well_name":"WELL-7",
-    "processed_at":"2025-12-14T01:28:14.935"
+    "processed_at":"2025-12-14T06:35:46.418"
   },
   {
     "well_id":8,
@@ -93,7 +93,7 @@
     "anomaly_count":0,
     "quality_score":0.9605263158,
     "well_name":"WELL-8",
-    "processed_at":"2025-12-14T01:28:14.935"
+    "processed_at":"2025-12-14T06:35:46.418"
   },
   {
     "well_id":9,
@@ -105,7 +105,7 @@
     "anomaly_count":0,
     "quality_score":0.9411764706,
     "well_name":"WELL-9",
-    "processed_at":"2025-12-14T01:28:14.935"
+    "processed_at":"2025-12-14T06:35:46.418"
   },
   {
     "well_id":10,
@@ -117,7 +117,7 @@
     "anomaly_count":0,
     "quality_score":0.942,
     "well_name":"WELL-10",
-    "processed_at":"2025-12-14T01:28:14.935"
+    "processed_at":"2025-12-14T06:35:46.418"
   },
   {
     "well_id":11,
@@ -129,7 +129,7 @@
     "anomaly_count":0,
     "quality_score":0.9714285714,
     "well_name":"WELL-11",
-    "processed_at":"2025-12-14T01:28:14.935"
+    "processed_at":"2025-12-14T06:35:46.418"
   },
   {
     "well_id":12,
@@ -141,7 +141,7 @@
     "anomaly_count":0,
     "quality_score":0.9925925926,
     "well_name":"WELL-12",
-    "processed_at":"2025-12-14T01:28:14.935"
+    "processed_at":"2025-12-14T06:35:46.418"
   },
   {
     "well_id":13,
@@ -153,7 +153,7 @@
     "anomaly_count":0,
     "quality_score":0.9369369369,
     "well_name":"WELL-13",
-    "processed_at":"2025-12-14T01:28:14.935"
+    "processed_at":"2025-12-14T06:35:46.418"
   },
   {
     "well_id":14,
@@ -165,7 +165,7 @@
     "anomaly_count":0,
     "quality_score":0.9518072289,
     "well_name":"WELL-14",
-    "processed_at":"2025-12-14T01:28:14.935"
+    "processed_at":"2025-12-14T06:35:46.418"
   },
   {
     "well_id":15,
@@ -177,7 +177,7 @@
     "anomaly_count":0,
     "quality_score":0.9166666667,
     "well_name":"WELL-15",
-    "processed_at":"2025-12-14T01:28:14.935"
+    "processed_at":"2025-12-14T06:35:46.418"
   },
   {
     "well_id":16,
@@ -189,7 +189,7 @@
     "anomaly_count":0,
     "quality_score":0.953815261,
     "well_name":"WELL-16",
-    "processed_at":"2025-12-14T01:28:14.935"
+    "processed_at":"2025-12-14T06:35:46.418"
   },
   {
     "well_id":17,
@@ -201,7 +201,7 @@
     "anomaly_count":0,
     "quality_score":0.934,
     "well_name":"WELL-17",
-    "processed_at":"2025-12-14T01:28:14.935"
+    "processed_at":"2025-12-14T06:35:46.418"
   },
   {
     "well_id":18,
@@ -213,7 +213,7 @@
     "anomaly_count":0,
     "quality_score":0.9397590361,
     "well_name":"WELL-18",
-    "processed_at":"2025-12-14T01:28:14.935"
+    "processed_at":"2025-12-14T06:35:46.418"
   },
   {
     "well_id":19,
@@ -225,7 +225,7 @@
     "anomaly_count":0,
     "quality_score":0.9642857143,
     "well_name":"WELL-19",
-    "processed_at":"2025-12-14T01:28:14.935"
+    "processed_at":"2025-12-14T06:35:46.418"
   },
   {
     "well_id":20,
@@ -237,6 +237,6 @@
     "anomaly_count":0,
     "quality_score":0.954,
     "well_name":"WELL-20",
-    "processed_at":"2025-12-14T01:28:14.935"
+    "processed_at":"2025-12-14T06:35:46.418"
   }
 ]
