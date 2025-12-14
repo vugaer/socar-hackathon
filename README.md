@@ -5,7 +5,7 @@
 [![Apache Airflow](https://img.shields.io/badge/Airflow-2.5+-red.svg)](https://airflow.apache.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-![image](https://i.imgur.com/kz1SQIQ.jpeg "Drillica" {width=400px height=400px})
+![image](https://i.imgur.com/kz1SQIQ.jpeg = 250x250)
 
 ## Executive Summary
 
