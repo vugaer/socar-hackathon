@@ -1,7 +1,7 @@
 # Drillica - Seismic Data Analytics Platform for SOCAR
 
 <p align="center">
-  <img src="https://i.imgur.com/kz1SQIQ.jpeg" width="150">
+  <img src="https://i.imgur.com/kz1SQIQ.jpeg" width="152">
   <img src="https://i.imgur.com/MsSXxZM.png" width="150">
 </p>
 
