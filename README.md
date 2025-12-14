@@ -3,6 +3,7 @@
 <p align="center">
   <img src="https://i.imgur.com/kz1SQIQ.jpeg" width="157">
   <img src="https://i.imgur.com/MsSXxZM.png" width="150">
+  <img src="https://i.imgur.com/j8tusU7.png" width="150">
 </p>
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
