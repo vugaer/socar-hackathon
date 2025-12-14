@@ -4724,3 +4724,17 @@
 [2025-12-14T06:40:17.285+0000] {logging_mixin.py:190} INFO - [2025-12-14T06:40:17.285+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-12-14T06:40:17.305+0000] {logging_mixin.py:190} INFO - [2025-12-14T06:40:17.305+0000] {dag.py:4180} INFO - Setting next_dagrun for socar_seismic_etl to 2025-12-14 00:00:00+00:00, run_after=2025-12-15 00:00:00+00:00
 [2025-12-14T06:40:17.318+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/socar_seismic_etl.py took 0.258 seconds
+[2025-12-14T06:42:48.943+0000] {processor.py:186} INFO - Started process (PID=453) to work on /opt/airflow/dags/socar_seismic_etl.py
+[2025-12-14T06:42:48.944+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/socar_seismic_etl.py for tasks to queue
+[2025-12-14T06:42:48.945+0000] {logging_mixin.py:190} INFO - [2025-12-14T06:42:48.945+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/socar_seismic_etl.py
+[2025-12-14T06:42:49.141+0000] {processor.py:925} INFO - DAG(s) 'socar_seismic_etl' retrieved from /opt/airflow/dags/socar_seismic_etl.py
+[2025-12-14T06:42:49.164+0000] {logging_mixin.py:190} INFO - [2025-12-14T06:42:49.164+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-14T06:42:49.183+0000] {logging_mixin.py:190} INFO - [2025-12-14T06:42:49.182+0000] {dag.py:4180} INFO - Setting next_dagrun for socar_seismic_etl to 2025-12-14 00:00:00+00:00, run_after=2025-12-15 00:00:00+00:00
+[2025-12-14T06:42:49.196+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/socar_seismic_etl.py took 0.257 seconds
+[2025-12-14T06:43:19.315+0000] {processor.py:186} INFO - Started process (PID=465) to work on /opt/airflow/dags/socar_seismic_etl.py
+[2025-12-14T06:43:19.316+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/socar_seismic_etl.py for tasks to queue
+[2025-12-14T06:43:19.318+0000] {logging_mixin.py:190} INFO - [2025-12-14T06:43:19.317+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/socar_seismic_etl.py
+[2025-12-14T06:43:19.516+0000] {processor.py:925} INFO - DAG(s) 'socar_seismic_etl' retrieved from /opt/airflow/dags/socar_seismic_etl.py
+[2025-12-14T06:43:19.538+0000] {logging_mixin.py:190} INFO - [2025-12-14T06:43:19.538+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-14T06:43:19.557+0000] {logging_mixin.py:190} INFO - [2025-12-14T06:43:19.556+0000] {dag.py:4180} INFO - Setting next_dagrun for socar_seismic_etl to 2025-12-14 00:00:00+00:00, run_after=2025-12-15 00:00:00+00:00
+[2025-12-14T06:43:19.569+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/socar_seismic_etl.py took 0.258 seconds
