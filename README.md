@@ -1,4 +1,4 @@
-# Drillica - Seismic Data Analytics Platform for SOCAR
+# Drillica - Seismic Data Analytics Platform for SOCAR CIC
 
 <p align="center">
   <img src="https://i.imgur.com/kz1SQIQ.jpeg" width="157">
