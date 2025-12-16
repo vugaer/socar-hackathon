@@ -1,2 +1,0 @@
-survey_type,source_format,wells_surveyed,total_readings,avg_amplitude,avg_data_quality_rate,earliest_survey,latest_survey
-Seismic Survey,Parquet,20,10820,-0.0010912690156637248,0.8996874114761942,1995-01-01 00:00:00,2024-01-01
